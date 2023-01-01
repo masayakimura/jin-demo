@@ -1,0 +1,116 @@
+@media screen and (min-width: 1024px) {
+    .content {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    header h1 {
+        font-size: 36px;
+        margin: 30px 0 20px;
+        font-weight: 600;
+    }
+    .footer {
+        &__wrapper {
+            margin: 0 auto;
+            max-width: 1200px;
+            & .column2 {
+                display: flex;
+                & .footer__article {
+                    width: 48%;
+                }
+                & .footer__archive {
+                    margin-top: 0;
+                    margin-left: 26px;
+                }
+            }
+        }
+        &__logo img {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .main-wrapper {
+
+        & article {
+            animation: article-hover-out 0.4s forwards;
+            &:hover {
+                animation: article-hover 0.4s forwards;
+            }
+        }
+    }
+
+    @keyframes article-hover {
+        0% {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+        }
+        50% {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+            transform: translateY(-6px);
+        }
+    }
+    @keyframes article-hover-out {
+        0% {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+            transform: translateY(-6px);
+        }
+        50% {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+        }
+    }
+
+
+    .nav-menu {
+        &__list {
+            text-align: center;
+        }
+        &__item {
+            padding: 10px 10px 0;
+            margin: 0 10px !important;
+            transition: nav-after-visible 1s;
+            &::after {
+                opacity: 0;
+                content: "";
+                width: 120%;
+                display: inline-block;
+                border-bottom: 2px solid #000;
+                transform: translate(-8%, -8px);
+                animation: nav-after-visible-out 0.4s forwards;
+
+            }
+            &:hover {
+                &::after {
+                    animation: nav-after-visible 0.4s forwards;
+                }
+            }
+        }
+    }
+
+    @keyframes nav-after-visible {
+        0% {
+            opacity: 0;
+            transform: translate(-10%, 1px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-10%, -8px);
+        }
+    }
+    @keyframes nav-after-visible-out {
+        0% {
+            opacity: 1;
+            transform: translate(-10%, -8px);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-10%, 1px);
+        }
+    }
+
+}

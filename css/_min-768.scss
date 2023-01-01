@@ -1,0 +1,175 @@
+@media screen and (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
+    .nav {
+        animation: nav-visible 1.2s;
+
+        .nav-menu {
+            display: block;
+            animation: none;
+            background-color: none ;
+            position: relative;
+            margin-top: 20px;
+            &__title {
+                display: none;
+            }
+            &__list {
+                display: flex;
+                justify-content: center;
+                padding: 0;
+            }
+            &__item {
+                margin: 0 20px;
+                font-size: 14px;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        animation: content-visible 1.6s;
+    }
+    main {
+        width: 65%;
+        padding: 0 10px;
+
+    }
+    aside {
+        width: 35%;
+        padding: 0 10px;
+        & article {
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        & .wp {
+            margin-top: 0;
+            padding-top: 10px;
+            box-shadow: none;
+        }
+    }
+    .main-wrapper {
+        padding: 0;
+        animation: none;
+        & article {
+            width: 49%;
+
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px 0;
+            & .column1 {
+                width: 33%;
+                margin: 5px;
+            }
+            & .column2 {
+                width: 26%;
+                margin: 5px;
+            }
+            & .column3 {
+                width: 33%;
+                margin: 5px;
+            }
+        }
+
+        &__text {
+            font-size: 13px;
+        }
+
+        & .title {
+            border-left: 3px solid #9acc1e;
+            border-bottom: none;
+            font-size: 14px;
+            font-weight: 700;
+            padding-bottom: 0;
+            padding-left: 6px;
+            margin-bottom: 14px;
+        }
+
+        &__button-area,
+        &__tag-wrapper {
+            margin-bottom: 30px;
+        }
+        &__tag-name {
+            background-color: #fff;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            font-size: 10px;
+            padding: 1px 4px;
+            margin: 0 10px 10px 0;
+            font-weight: 500;
+        }
+
+        & ul.list {
+            margin: 0;
+        }
+
+        & li.item {
+            border-bottom: none;
+            font-size: 12px;
+            margin: 6px 0;
+            padding: 0;
+
+        }
+
+        &__archive {
+            margin-top: 40px;
+        }
+
+        & .popular-post-wrapper {
+            margin-top: 20px;
+        }
+
+        & .popular-post__text-area {
+            font-size: 12px;
+            padding: 0;
+        }
+
+        & small {
+            margin-top: 0;
+        }
+    }
+
+
+    header h1 {
+        animation: h1-slider 1.2s;
+    }
+
+    @keyframes h1-slider {
+        0%, 50% {
+            opacity: 0;
+            transform: translateY(30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes nav-visible {
+        0%, 30% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes content-visible {
+        0%, 50% {
+            opacity: 0;
+            transform: translateY(14px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
